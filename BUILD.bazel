@@ -80,6 +80,7 @@ genrule(
 	srcs = ["SDL2_mac"],
 	outs = ["SDL2.dylib"],
 	cmd = "cp $(location SDL2_mac) $(location SDL2.dylib)",
+	visibility = ["//visibility:public"],
 )
 
 cc_binary(
